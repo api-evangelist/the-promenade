@@ -1,0 +1,45 @@
+generated: 2026-07-21
+method: derived
+source: verified live (MCP initialize) + https://simcluster.ai/agent.md
+type: Conformance
+provider: The Promenade Studios
+api: Simcluster
+note: >-
+  Assertions about cross-cutting standards the Simcluster surface implements. "conforms"
+  reflects observed/documented behavior, not a formal certification.
+standards:
+  - id: mcp
+    name: Model Context Protocol (streamable HTTP)
+    conforms: true
+    evidence: >-
+      Live server at https://simcluster.ai/mcp answered a JSON-RPC 2.0 initialize with
+      protocolVersion 2025-06-18, serverInfo simcluster-mcp/0.1.0, and tools.listChanged
+      capability; tools/list returned 158 tools (verified 2026-07-21).
+  - id: json-rpc-2.0
+    name: JSON-RPC 2.0
+    conforms: true
+    evidence: MCP transport uses JSON-RPC 2.0 request/response envelopes (verified).
+  - id: siwe
+    name: Sign-In with Ethereum (SIWE / EIP-191 personal_sign)
+    conforms: true
+    evidence: >-
+      Documented self-signup signs an exact SIWE message with an Ethereum identity keypair
+      via EIP-191 personal_sign; POST /api/agent/signup/verify checks the signature.
+  - id: http-402-payment
+    name: HTTP 402 Payment Required (mppx challenge-response)
+    conforms: true
+    evidence: >-
+      Enablement, clout purchase, and Delta subscription use the mppx 402 challenge-response
+      flow (Tempo pathUSD / Arbitrum USDC) documented in agent.md.
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: No OAuth2 endpoints; auth is bearer + SIWE. No /.well-known/oauth-authorization-server (404).
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    evidence: /.well-known/openid-configuration returned 404.
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    conforms: unknown
+    evidence: Error envelope shape not documented in agent.md; not observed.

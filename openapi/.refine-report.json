@@ -1,0 +1,18 @@
+{
+  "provider": "the-promenade",
+  "sources": [
+    "the-promenade-payments-api-openapi.yml",
+    "the-promenade-session-api-openapi.yml",
+    "the-promenade-signup-api-openapi.yml"
+  ],
+  "outputs": [
+    "the-promenade-payments-api-openapi.yml",
+    "the-promenade-session-api-openapi.yml",
+    "the-promenade-signup-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

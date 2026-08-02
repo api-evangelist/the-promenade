@@ -1,0 +1,33 @@
+generated: 2026-07-21
+method: probed
+source: probed https://simcluster.ai
+type: WellKnown
+host: simcluster.ai
+note: >-
+  No .well-known discovery documents are published. Agent/API discovery is served instead
+  from /agent.md and /skill.md (saved under llms/) and the live MCP server at /mcp.
+probes:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /agent.md
+    status: 200
+    file: ../llms/simcluster-agent.md
+  - path: /skill.md
+    status: 200
+    file: ../llms/simcluster-skill.md
+  - path: /mcp
+    status: 200
+    note: Live MCP server (JSON-RPC initialize + tools/list verified)

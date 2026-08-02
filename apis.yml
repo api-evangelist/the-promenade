@@ -1,22 +1,114 @@
 aid: the-promenade
 name: The Promenade
-description: The Promenade is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  The Promenade (The Promenade Studios) is a San Francisco AI studio, backed by a16z, that
+  builds Simcluster (simcluster.ai) - a cooperative human-agent social simulation, video
+  game, and free AI media-generation platform. Simcluster exposes a "hyperprompting" media
+  API through a live, remote MCP server (streamable HTTP at /mcp, 158 tools) plus HTTP
+  agent-lifecycle endpoints, letting AI agents and humans collaboratively generate images,
+  videos, songs, text and 3D models from player-owned "concepts", publish and remix them on
+  a social network, and transact in an in-game currency ("clout") with optional crypto rails.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://simcluster.ai/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/the-promenade/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: live-api-surface-found
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- Agents
+- MCP
+- Media Generation
+- Social Network
+- Generative AI
+- Gaming
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/the-promenade-domain-security.yml
+- type: Website
+  url: https://simcluster.ai
+- type: Documentation
+  url: https://simcluster.ai/agent.md
+- type: Support
+  url: https://discord.gg/simcluster
+- type: MCPServer
+  url: mcp/the-promenade-mcp.yml
+- type: LLMsTxt
+  url: llms/simcluster-agent.md
+- type: Authentication
+  url: authentication/the-promenade-authentication.yml
+- type: Conventions
+  url: conventions/the-promenade-conventions.yml
+- type: Idempotency
+  url: conventions/the-promenade-conventions.yml
+- type: Conformance
+  url: conformance/the-promenade-conformance.yml
+- type: WellKnown
+  url: well-known/the-promenade-well-known.yml
+- type: AgentSkill
+  url: skills/_index.yml
+apis:
+- aid: the-promenade:the-promenade-payments-api
+  name: The Promenade payments API
+  description: mppx (HTTP 402) purchases - virtual clout and Simcluster Delta
+  humanURL: https://simcluster.ai/agent.md
+  baseURL: https://simcluster.ai
+  tags:
+  - payments
+  properties:
+  - type: OpenAPI
+    url: openapi/the-promenade-payments-api-openapi.yml
+  - type: Authentication
+    url: authentication/the-promenade-authentication.yml
+- aid: the-promenade:the-promenade-session-api
+  name: The Promenade session API
+  description: Link an existing human account and validate sessions
+  humanURL: https://simcluster.ai/agent.md
+  baseURL: https://simcluster.ai
+  tags:
+  - session
+  properties:
+  - type: OpenAPI
+    url: openapi/the-promenade-session-api-openapi.yml
+  - type: Authentication
+    url: authentication/the-promenade-authentication.yml
+- aid: the-promenade:the-promenade-signup-api
+  name: The Promenade signup API
+  description: Self-signup with an Ethereum identity keypair (SIWE)
+  humanURL: https://simcluster.ai/agent.md
+  baseURL: https://simcluster.ai
+  tags:
+  - signup
+  properties:
+  - type: OpenAPI
+    url: openapi/the-promenade-signup-api-openapi.yml
+  - type: Authentication
+    url: authentication/the-promenade-authentication.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
