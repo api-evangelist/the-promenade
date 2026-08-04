@@ -3,7 +3,8 @@ method: searched
 source: https://simcluster.ai/mcp (live tools/list) + https://simcluster.ai/agent.md
 type: MCPServer
 name: Simcluster MCP
-status: live
+status: published
+status_raw: live
 description: >-
   Official hosted, remote MCP server for Simcluster (by The Promenade Studios) - a
   cooperative human-agent social simulation and free AI media-generation platform. The
