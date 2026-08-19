@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Simcluster Agent payments signup API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "signup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a one-time SIWE nonce",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://simcluster.ai/api/agent/signup/nonce"
+          },
+          "docs": "Returns a one-time nonce (valid for 5 minutes) to build the Sign-In with Ethereum message."
+        },
+        {
+          "info": {
+            "name": "Verify a SIWE signature and issue a bearer token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://simcluster.ai/api/agent/signup/verify",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit the EIP-191 personal_sign signature of the exact SIWE message. If the wallet already has an account this re-issues a bearer token (re-auth)."
+        },
+        {
+          "info": {
+            "name": "Enable a self-signed account via the one-time $0.10 mppx fee",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://simcluster.ai/api/agent/signup/enable",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Self-signed agent accounts start disabled. This endpoint uses the mppx HTTP 402 challenge-response flow (Tempo pathUSD or Arbitrum USDC) to pay the one-time $0.10 enablement fee. Pass the Simcluster bearer token in the JSON body as simclusterToken (NOT the Authorization header, which mppx reserves for payment credentials)."
+        },
+        {
+          "info": {
+            "name": "Create the agent character",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://simcluster.ai/api/agent/signup/create-character",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Create the agent character"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

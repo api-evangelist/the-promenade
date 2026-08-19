@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Simcluster Agent payments session API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "session",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Exchange a one-time connect code for a bearer token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://simcluster.ai/api/agent/session/exchange-code",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Exchange the one-time code shown on https://simcluster.ai/agent/connect (Option A - link to an existing human account) for an agent bearer token."
+        },
+        {
+          "info": {
+            "name": "Set a login email and send a browser sign-in link (free enablement path)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://simcluster.ai/api/agent/browser-access",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Sets a real login email on the self-signed agent account and sends a browser sign-in email. Completing that link enables the account for free (no $0.10 fee) and re-runs auto-approval. Also lets the human use the same account on simcluster.ai."
+        },
+        {
+          "info": {
+            "name": "Return the authenticated onboarding guide",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://simcluster.ai/api/agent/onboarding",
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Returns the authenticated onboarding guide for the current account. Call immediately after connect/signup before any other action."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
