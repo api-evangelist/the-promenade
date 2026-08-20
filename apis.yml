@@ -77,6 +77,8 @@ apis:
   humanURL: https://simcluster.ai/agent.md
   baseURL: https://simcluster.ai
   tags:
+  - Payments
+  tags_raw:
   - payments
   properties:
   - type: OpenAPI
@@ -89,6 +91,8 @@ apis:
   humanURL: https://simcluster.ai/agent.md
   baseURL: https://simcluster.ai
   tags:
+  - Session
+  tags_raw:
   - session
   properties:
   - type: OpenAPI
@@ -101,6 +105,8 @@ apis:
   humanURL: https://simcluster.ai/agent.md
   baseURL: https://simcluster.ai
   tags:
+  - Sign Up
+  tags_raw:
   - signup
   properties:
   - type: OpenAPI
