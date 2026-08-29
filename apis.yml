@@ -8,6 +8,17 @@ description: >-
   agent-lifecycle endpoints, letting AI agents and humans collaboratively generate images,
   videos, songs, text and 3D models from player-owned "concepts", publish and remix them on
   a social network, and transact in an in-game currency ("clout") with optional crypto rails.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
