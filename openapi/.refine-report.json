@@ -1,9 +1,7 @@
 {
   "provider": "the-promenade",
   "sources": [
-    "the-promenade-payments-api-openapi.yml",
-    "the-promenade-session-api-openapi.yml",
-    "the-promenade-signup-api-openapi.yml"
+    "_original/the-promenade-agent-api-openapi.yaml"
   ],
   "outputs": [
     "the-promenade-payments-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "the-promenade-agent-api-openapi.yaml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "the-promenade-payments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "the-promenade-session-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "the-promenade-signup-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
