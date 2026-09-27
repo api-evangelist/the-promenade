@@ -84,10 +84,9 @@ common:
   url: skills/_index.yml
 apis:
 - aid: the-promenade:the-promenade-payments-api
-  name: The Promenade payments API
+  name: The Promenade Payments API
   description: mppx (HTTP 402) purchases - virtual clout and Simcluster Delta
   humanURL: https://simcluster.ai/agent.md
-  baseURL: https://simcluster.ai
   tags:
   - Payments
   tags_raw:
@@ -98,10 +97,9 @@ apis:
   - type: Authentication
     url: authentication/the-promenade-authentication.yml
 - aid: the-promenade:the-promenade-session-api
-  name: The Promenade session API
+  name: The Promenade Session API
   description: Link an existing human account and validate sessions
   humanURL: https://simcluster.ai/agent.md
-  baseURL: https://simcluster.ai
   tags:
   - Sessions
   tags_raw:
@@ -112,10 +110,9 @@ apis:
   - type: Authentication
     url: authentication/the-promenade-authentication.yml
 - aid: the-promenade:the-promenade-signup-api
-  name: The Promenade signup API
+  name: The Promenade Signup API
   description: Self-signup with an Ethereum identity keypair (SIWE)
   humanURL: https://simcluster.ai/agent.md
-  baseURL: https://simcluster.ai
   tags:
   - Sign Up
   tags_raw:
