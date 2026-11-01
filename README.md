@@ -64,6 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The Promenade is a company surfaced as a portfolio company of a16z and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+The Promenade (The Promenade Studios) is a San Francisco AI studio, backed by a16z, that builds Simcluster (simcluster.ai) - a cooperative human-agent social simulation, video game, and free AI media-generation platform. Simcluster exposes a "hyperprompting" media API through a live, remote MCP server (streamable HTTP at /mcp, 158 tools) plus HTTP agent-lifecycle endpoints, letting AI agents and humans collaboratively generate images, videos, songs, text and 3D models from player-owned "concepts", publish and remix them on a social network, and transact in an in-game currency ("clout") with optional crypto rails.
 
-Backed by: a16z
+**Areas:** Company · Artificial Intelligence · Agents · MCP · Media Generation · Social Network · Generative AI · Gaming
+
+## The Promenade on APIs.io
+
+Everything profiled for The Promenade is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/the-promenade/](https://apis.io/providers/the-promenade/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [The Promenade Payments API](https://apis.io/apis/the-promenade/the-promenade-payments-api/) — mppx (HTTP 402) purchases - virtual clout and Simcluster Delta
+- [The Promenade Session API](https://apis.io/apis/the-promenade/the-promenade-session-api/) — Link an existing human account and validate sessions
+- [The Promenade Signup API](https://apis.io/apis/the-promenade/the-promenade-signup-api/) — Self-signup with an Ethereum identity keypair (SIWE)
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Simcluster MCP](https://apis.io/servers/the-promenade/simcluster-mcp/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Simcluster Agent payments API](https://apis.io/collections/the-promenade/open-the-promenade-payments-api/)
+- [Simcluster Agent payments session API](https://apis.io/collections/the-promenade/open-the-promenade-session-api/)
+- [Simcluster Agent payments signup API](https://apis.io/collections/the-promenade/open-the-promenade-signup-api/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [The Promenade Authentication](https://apis.io/security/the-promenade/the-promenade-authentication/)
+- [The Promenade Domain Security](https://apis.io/security/the-promenade/the-promenade-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://simcluster.ai)
+- [Documentation](https://simcluster.ai/agent.md)
+- [Support](https://discord.gg/simcluster)
+
+## API Evangelist rating
+
+**Kin Score 22.6** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 47.3 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 23.2 |
+| Access clarity | 0.0 |
+
+**Agent readiness 24.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 15.5** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/the-promenade/](https://apis.io/providers/the-promenade/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for The Promenade: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/the-promenade/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
